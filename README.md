@@ -23,3 +23,10 @@ Install the required dependencies from requirements.txt:
 pip install -r requirements.txt
 ```
 
+### 2. Install PyGame
+
+```bash
+python3 -m pip install -U pygame --user
+```
+
+
