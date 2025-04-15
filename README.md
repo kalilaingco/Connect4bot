@@ -11,7 +11,6 @@ Before you begin, ensure you have the following installed on your local machine:
 - **Python 3.8+**
 - **Git**
 - **pip**
-  side note: it is a good idea to install the newest release of pip if you haven't done so
    ```bash
   pip install --upgrade pip
   ```
