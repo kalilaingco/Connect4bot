@@ -7,10 +7,10 @@ class TicTacToe(Game):
     a dict of {(x, y): Player} entries, where Player is 'X' or 'O'."""
 
     def __init__(self, h=3, v=3, k=3):
-        self.h = h
-        self.v = v
-        self.k = k
-        moves = [(x, y) for x in range(1, h + 1)
+        self.h = h  #h is height
+        self.v = v  #v is across
+        self.k = k  #k is how many in a row
+        moves = [(x, y) for x in range(1, h + 1) 
                  for y in range(1, v + 1)]
         self.initial = GameState(to_move='X', utility=0, board={}, moves=moves)
 
@@ -83,14 +83,18 @@ class ConnectFour(TicTacToe):
                 if y == 1 or (x, y-1) in state.board]
     
 if __name__ == "__main__":
-    connect4 = ConnectFour()  # Creating the game instance
-    print(connect4.initial.board)  # Empty board at start
-    print(connect4.initial.moves)  # All possible initial moves
-    
+    connect4 = ConnectFour(h=3, v=3, k=3)  # Creating the game instance
+    print("Initial board:")
+    connect4.display(connect4.initial)
+    print("\nAvailable moves at start:")
+    print(connect4.initial.moves)
+
     # Test making a move
     first_move = (1, 1)  # Example: first column, bottom row
     new_state = connect4.result(connect4.initial, first_move)
+    print("\nAfter one move:")
     connect4.display(new_state)
+
     
     # Play a full game
     utility = connect4.play_game(alpha_beta_player, query_player)  # computer moves first 
