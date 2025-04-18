@@ -22,6 +22,10 @@ Install the required dependencies from requirements.txt:
 ```bash
 pip install -r requirements.txt
 ```
+To uninstall try 
+```bash
+pip uninstall -r requirements.txt
+```
 
 ### 2. Install PyGame
 
