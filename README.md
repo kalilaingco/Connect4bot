@@ -41,7 +41,7 @@ connect4.py
 ```
    Then the game will start, the AI agent will make the first move. To play against the agent, input a valid column number (1-7) and press enter.
    
-   - ## To run the game WITH the UI, go to the root of the project and input this command ## 
+   - ##To run the game WITH the UI, go to the root of the project and input this command## 
    ```bash
 ui.py
 ```
