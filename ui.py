@@ -3,6 +3,7 @@ from tkinter import messagebox
 from connect4 import ConnectFour, Connect4Player
 
 CELL_SIZE = 80
+ROWS = 6
 COLS = 7
 
 class Connect4UI:
@@ -49,7 +50,7 @@ class Connect4UI:
                 self.canvas.create_oval(px+10, py+10, px+CELL_SIZE-10, py+CELL_SIZE-10, fill=color)
 
     def handle_click(self, event):
-        col = event.x // CELL_SIZE +
+        col = event.x // CELL_SIZE + 1
         move = self.find_valid_move(col)
         if not move:
             return 
