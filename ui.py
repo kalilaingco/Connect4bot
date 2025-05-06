@@ -25,10 +25,10 @@ class Connect4UI:
     def show_welcome_message(self):
         message = (
             "Welcome to Connect 4 by Alyssa, Kalila, and Theresa!\n\n"
-            "The computer plays 'X' (purple).\n"
-            "You play 'O' (pink).\n"
-            "Click a column to drop your piece.\n\n"
-            "Columns are numbered 1–7 from left to right.\n"
+            "The computer places a blue disc.\n"
+            "You place a pink disc.\n\n"
+            "Whoever reaches 4 in a row, horizontally, vertically, or diagonally wins!\n\n"
+            "Click a column to drop your piece!\n\n"
             "Good luck!"
         )
         messagebox.showinfo("Welcome!", message)
@@ -44,7 +44,7 @@ class Connect4UI:
                 if piece == 'X':
                     color = "hot pink"
                 elif piece == 'O':
-                    color = "plum"
+                    color = "blue"
                 else:
                     color = "white"
                 self.canvas.create_oval(px+10, py+10, px+CELL_SIZE-10, py+CELL_SIZE-10, fill=color)
@@ -81,9 +81,9 @@ class Connect4UI:
     def end_game(self):
         utility = self.game.utility(self.state, 'X')
         if utility == 1:
-            winner = "The computer (X) wins!"
+            winner = "You win!"
         elif utility == -1:
-            winner = "You (O) win! Congratulations!"
+            winner = "You Lost! The computer wins!"
         else:
             winner = "It's a draw!"
 
